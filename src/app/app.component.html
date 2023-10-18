@@ -1,0 +1,36 @@
+<main>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Healthy Option</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="content">
+    <input 
+    placeholder="Barcode" 
+    name="text" 
+    type="text" 
+    class="input_field"
+    [(ngModel)]="inputbarcode"
+    (ngModelChange)="check($event)"
+  >
+  
+    <div class="details">
+      <p>TITLE: {{ item_desc }}</p>
+      <p>PHP: {{ price }}</p>
+      <img [src]="'https://barcodeapi.org/api/' + inputbarcode" alt="barcode">
+    </div>
+  </div>
+
+  <div class="print">
+    <button mat-stroked-button disabled>Print</button>
+  </div>
+</main>
