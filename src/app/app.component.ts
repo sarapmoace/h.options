@@ -13,11 +13,11 @@ export class AppComponent {
   item_desc: any;
   barcode: any;
   inputbarcode: String = "";
+  printVisible: boolean = false;
 
   constructor(
     private apiservice: ApiService,
     private http:HttpClient, ) {
-
     }
 
   loadData() {
@@ -34,5 +34,13 @@ export class AppComponent {
   check(value: string) {
     this.inputbarcode = value;
     this.loadData();
+    this.showPrint()
+  }
+
+  showPrint(){
+    if (this.price != ""){
+      this.printVisible = true;
+    }
+    console.log(this.printVisible)
   }
 }

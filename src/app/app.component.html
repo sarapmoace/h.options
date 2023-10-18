@@ -26,11 +26,10 @@
     <div class="details">
       <p>TITLE: {{ item_desc }}</p>
       <p>PHP: {{ price }}</p>
-      <img [src]="'https://barcodeapi.org/api/' + inputbarcode" alt="barcode">
     </div>
   </div>
 
   <div class="print">
-    <button mat-stroked-button disabled>Print</button>
+    <button mat-stroked-button [disabled]="!printVisible">Print</button>
   </div>
 </main>
