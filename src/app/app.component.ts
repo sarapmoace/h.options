@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(
     private apiservice: ApiService,
     private http:HttpClient, ) {
-    }
+  }
 
   loadData() {
     this.apiservice.getData(this.inputbarcode).subscribe((res: any) => {
