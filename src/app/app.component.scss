@@ -40,6 +40,7 @@ mat-toolbar{
     background-color: transparent;
 }
 
+p.not-found,
 .details{
     text-align: center;
 }
@@ -47,6 +48,12 @@ mat-toolbar{
 .details p{
     font-size: 1.25rem;
     margin-top: .75rem;
+}
+
+p.not-found{
+    margin-top: .75rem;
+    font-size: 1.25rem;
+    opacity: .30;
 }
 
 img{
@@ -57,4 +64,12 @@ img{
 .print{
     display: flex;
     justify-content: center;
+}
+
+p.check{
+    text-align: center;
+    margin-top: 2rem;
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
 }

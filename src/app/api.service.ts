@@ -12,4 +12,8 @@ export class ApiService {
   getData(inputbarcode: any): Observable<any>{
     return this._http.get('http://172.16.100.40:8001/api/products/lists/search/' + inputbarcode);
   }
+
+  printData(title: any, price: any): Observable<any>{
+    return this._http.get(`https://127.0.0.1:8080/api/print?title=${title}&price=${price}`)
+  }
 }

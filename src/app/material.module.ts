@@ -5,7 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import {Component} from '@angular/core';
+
 
 @NgModule({
   exports: [
@@ -15,6 +15,6 @@ import {Component} from '@angular/core';
     MatInputModule,
     MatFormFieldModule,
     FormsModule
-  ]
+  ],
 })
 export class MaterialModule { }

@@ -19,17 +19,24 @@
     name="text" 
     type="text" 
     class="input_field"
+    #inputBarcode
     [(ngModel)]="inputbarcode"
     (ngModelChange)="check($event)"
   >
   
-    <div class="details">
-      <p>TITLE: {{ item_desc }}</p>
-      <p>PHP: {{ price }}</p>
+    <div class="details" *ngIf="isError; else notFound">
+      <p>{{ item_desc }}</p>
+      <p>{{ price }} {{ currency }}</p>
     </div>
+        
+    <ng-template #notFound>
+      <p class="not-found">Not Found</p>
+    </ng-template>
   </div>
 
   <div class="print">
-    <button mat-stroked-button [disabled]="!printVisible">Print</button>
+    <button mat-stroked-button [disabled]="!printVisible" (click)="printData()">Print</button>
   </div>
+
+  <p class="check" routerLink="/updated-data">check updated data</p>
 </main>
